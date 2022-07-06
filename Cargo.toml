@@ -24,15 +24,15 @@ ui = ['bevy_ui']
 [dependencies]
 leafwing_input_manager_macros = { path = "macros", version = "0.3" }
 
-bevy_app = {version = "0.7", default-features = false}
-bevy_core = {version = "0.7", default-features = false}
-bevy_transform = {version = "0.7", default-features = false}
-bevy_ecs = {version = "0.7", default-features = false}
-bevy_input = {version = "0.7", default-features = false, features = ["serialize"]}
-bevy_math = {version = "0.7", default-features = false}
-bevy_utils = {version = "0.7", default-features = false}
-bevy_ui = {version = "0.7", default-features = false, optional = true}
-bevy_window = {version = "0.7", default-features = false}
+bevy_app = {version = "0.7", path = "../bevy/crates/bevy_app", default-features = false}
+bevy_core = {version = "0.7", path = "../bevy/crates/bevy_core", default-features = false}
+bevy_transform = {version = "0.7", path = "../bevy/crates/bevy_transform", default-features = false}
+bevy_ecs = {version = "0.7", path = "../bevy/crates/bevy_ecs", default-features = false}
+bevy_input = {version = "0.7", path = "../bevy/crates/bevy_input", default-features = false, features = ["serialize"]}
+bevy_math = {version = "0.7", path = "../bevy/crates/bevy_math", default-features = false}
+bevy_utils = {version = "0.7", path = "../bevy/crates/bevy_utils", default-features = false}
+bevy_ui = {version = "0.7", path = "../bevy/crates/bevy_ui", default-features = false, optional = true}
+bevy_window = {version = "0.7", path = "../bevy/crates/bevy_window", default-features = false}
 
 petitset = {version = "0.2.1", features = ["serde_compat"]}
 derive_more = {version = "0.99", default-features = false, features = ["display", "error"]}
@@ -40,8 +40,8 @@ itertools = "0.10"
 serde = {version = "1.0", features = ["derive"]}
 
 [dev-dependencies]
-bevy = {version = "0.7", default-features = false, features = ["bevy_gilrs", "bevy_sprite", "bevy_text", "bevy_ui", "bevy_render", "bevy_core_pipeline", "x11"]}
-bevy_egui = {version="0.13", default-features = false}
+bevy = {version = "0.7", path = "../bevy", default-features = false, features = ["bevy_gilrs", "bevy_sprite", "bevy_text", "bevy_ui", "bevy_render", "bevy_core_pipeline", "x11"]}
+bevy_egui = {version="0.14", path = "../bevy_egui", default-features = false}
 
 [lib]
 name = "leafwing_input_manager"
