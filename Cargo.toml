@@ -24,7 +24,16 @@ ui = ['bevy/bevy_ui']
 [dependencies]
 leafwing_input_manager_macros = { path = "macros", version = "0.5" }
 
-bevy = {version = "0.8", default-features = false, features = ["serialize", "bevy_gilrs"]}
+bevy = {version = "0.8", path = "../bevy", default-features = false, features = ["serialize", "bevy_gilrs"]}
+# # # bevy_app = {      path = "../bevy/crates/bevy_app", version = "0.7", default-features = false}
+# # # bevy_core = {     path = "../bevy/crates/bevy_core", version = "0.7", default-features = false}
+# # # bevy_transform = {path = "../bevy/crates/bevy_transform", version = "0.7", default-features = false}
+# # # bevy_ecs = {      path = "../bevy/crates/bevy_ecs", version = "0.7", default-features = false}
+# # # bevy_input = {    path = "../bevy/crates/bevy_input", version = "0.7", default-features = false, features = ["serialize"]}
+# # # bevy_math = {     path = "../bevy/crates/bevy_math", version = "0.7", default-features = false}
+# # # bevy_utils = {    path = "../bevy/crates/bevy_utils", version = "0.7", default-features = false}
+# # # bevy_ui = {       path = "../bevy/crates/bevy_ui", version = "0.7", default-features = false, optional = true}
+# # # bevy_window = {   path = "../bevy/crates/bevy_window", version = "0.7", default-features = false}
 
 petitset = {version = "0.2.1", features = ["serde_compat"]}
 derive_more = {version = "0.99", default-features = false, features = ["display", "error"]}
@@ -32,7 +41,7 @@ itertools = "0.10"
 serde = {version = "1.0", features = ["derive"]}
 
 [dev-dependencies]
-bevy = {version = "0.8", default-features = false, features = ["bevy_asset", "bevy_sprite", "bevy_text", "bevy_ui", "bevy_render", "bevy_core_pipeline", "x11"]}
+bevy = {version = "0.8", path = "../bevy", default-features = false, features = ["bevy_asset", "bevy_sprite", "bevy_text", "bevy_ui", "bevy_render", "bevy_core_pipeline", "x11"]}
 bevy_egui = "0.15.0"
 
 [lib]
